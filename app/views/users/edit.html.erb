@@ -1,0 +1,17 @@
+<h1>edit profile</h1>
+ 
+<% form_for @user do |f| %>
+  <%= f.error_messages %><br />
+  
+  <%= f.label 'edit password', f.object.new_record? ? nil : "change password" %><br />
+  <%= f.password_field :password %><br />
+  <br />
+  
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %><br />
+  <br />
+
+  <%= f.submit "update" %>
+
+   or <%= link_to "cancel", url_for(:controller => 'users', :action => 'show', :id => @user.id ) %>
+<% end %>

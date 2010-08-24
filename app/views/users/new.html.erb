@@ -1,0 +1,20 @@
+<h1>New user</h1>
+
+<% form_for @user do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :email, 'email' %><br />
+  <%= f.text_field :email %><br />
+  <br />
+  <%= f.label :login, 'username' %><br />
+  <%= f.text_field :login %><br />
+  <br />
+  <%= f.label :password, 'password' %><br />
+  <%= f.password_field :password %><br />
+  <br />
+  <%= f.label :password_confirmation, 'confirm password' %><br />
+  <%= f.password_field :password_confirmation %><br />
+  <br />
+  <%= f.submit "signup" %>
+<% end %>
+
+<%= link_to 'Back', users_path %>
