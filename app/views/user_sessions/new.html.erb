@@ -1,5 +1,5 @@
 <h1>login</h1>
-<% form_for @user_session do |f| %>
+<% form_for @user_session, :url => url_for(:controller=>'user_sessions', :action=>'create') do |f| %>
   <%= f.error_messages %><br />
   <%= f.label :login, 'username' %><br />
   <%= f.text_field :login %><br />
